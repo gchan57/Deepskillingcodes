@@ -4,7 +4,7 @@ class Logger {
     private Logger() {
         str="Logger initialised";
     }
-    public static Logger Logger(){
+    public static Logger Checker(){
         if(loginInstance==null){
             loginInstance=new Logger();
         }
@@ -15,8 +15,8 @@ class Logger {
 
 public class Main {
     public static void main(String[] args) {
-       Logger one=Logger.Logger();
-       Logger two=Logger.Logger();
+       Logger one=Logger.Checker();
+       Logger two=Logger.Checker();
        System.out.println("Message of one "+one.str+" "+one.hashCode());
        System.out.println("Message of two "+two.str+" "+two.hashCode());
 
