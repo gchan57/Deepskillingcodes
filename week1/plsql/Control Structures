@@ -1,0 +1,40 @@
+DECLARE
+BEGIN
+    FOR c IN (SELECT CustomerID, Age FROM Customers)
+    LOOP
+        IF c.Age > 60 THEN
+            UPDATE Loans
+            SET InterestRate = InterestRate - 1
+            WHERE CustomerID = c.CustomerID;
+        END IF;
+    END LOOP;
+END;
+/
+
+
+DECLARE
+BEGIN
+    FOR c IN (SELECT CustomerID, Balance FROM Customers)
+    LOOP
+        IF c.Balance > 10000 THEN
+            UPDATE Customers
+            SET IsVIP = 'TRUE'
+            WHERE CustomerID = c.CustomerID;
+        END IF;
+    END LOOP;
+END;
+/
+
+set serveroutput on;
+DECLARE
+begin
+    for l in (
+        select customerid,duedate
+        from loans
+        where duedate <=sysdate +30
+    )
+    loop
+        dbms_output.put_line('Remainder for customer'|| l.customerid);
+    end loop;
+    end;
+    /
