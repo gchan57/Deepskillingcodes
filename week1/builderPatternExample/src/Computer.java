@@ -5,7 +5,7 @@ public class Computer {
     private String Storage;
     private String Display;
     private String Os;
-
+   //variabless
     private Computer(ComBuilder builder) {
         this.CPU = builder.CPU;
         this.RAM = builder.RAM;

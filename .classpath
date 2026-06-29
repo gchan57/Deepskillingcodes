@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="week1/builderPatternExample/src"/>
+	<classpathentry kind="src" path="week1/Ecommercesearch/src"/>
+	<classpathentry kind="src" path="week1/FactoryMethodPatternExample/src"/>
+	<classpathentry kind="src" path="week1/financialforcast/src"/>
+	<classpathentry kind="src" path="week1/SingletonPatternExample/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
